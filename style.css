@@ -1,0 +1,212 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  gap: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: linear-gradient(top bottom, red, orange);
+}
+
+.container::after {
+  content: "";
+  background-image: url(./assets/minimalist1.jpg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  /* border-radius: 0 0 300px 300px; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 70px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.301);
+  border-radius: 0 0 30px 30px;
+}
+
+.navbar .content-navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 560px;
+}
+
+.navbar .content-navbar ul li {
+  list-style-type: none;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.548);
+  letter-spacing: 2px;
+  font-weight: 450;
+  cursor: pointer
+}
+
+.navbar .logo h1 {
+  display: flex;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.315);
+}
+
+.navbar .logo h1 span:nth-child(1) {
+  color: rgb(124, 224, 255);
+}
+.navbar .logo h1 span:nth-child(2) {
+  color: rgb(255, 176, 124);
+}
+
+.logo img {
+  mix-blend-mode: screen;
+  width: 125px;
+}
+
+.main-content {
+  margin: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-content h1 {
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.315);
+  display: flex;
+}
+
+.main-content h1 span:nth-child(1) {
+  color: rgb(124, 224, 255);
+}
+
+.main-content h1 span:nth-child(2) {
+  color: rgb(255, 176, 124);
+}
+
+.main-content p {
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.507);
+}
+
+.main-content h1 {
+  font-size: 5.5em;
+}
+
+.main-content p {
+  text-align: center;
+}
+
+.main-content button {
+  border: none;
+  margin-top: 20px;
+  padding: 10px 50px;
+  font-size: 1.2em;
+  background: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.233);
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(240, 240, 240);
+}
+
+/* very big */
+@media only screen and (max-width: 1300px) {
+  .main-content {
+    margin: 185px;
+  }
+}
+
+
+/* big */
+@media only screen and (max-width: 992px) {
+  .navbar {
+    padding: 20px 30px;
+    font-size: 13px;
+  }
+
+  .navbar .content-navbar ul {
+    width: 500px;
+  }
+
+  .main-content {
+    margin: 135px;
+    font-size: 13px;
+  }
+}
+
+/* medium */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar .logo h1 {
+    margin-right: 80px;
+  }
+
+  .main-content {
+    font-size: 11px;
+    margin: 140px;
+  }
+}
+
+/* small */
+@media only screen and (max-width: 576px) {
+  .navbar {
+    font-size: 11px;
+  }
+
+  .navbar .logo h1 {
+    display: none;
+  }
+
+  .navbar .content-navbar ul {
+    width: 390px;
+  }
+
+  .main-content {
+    font-size: 10px;
+  }
+
+  .main-content button {
+    margin-top: 12px;
+  }
+}
+
+/* very small */
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar .logo h1 {
+    display: flex;
+    margin-right: 0;
+    font-size: 21px;
+  }
+
+  .navbar .content-navbar {
+    display: none;
+  }
+
+  .main-content {
+    font-size: 8.3px;
+  }
+  
+  .main-content p {
+    width: 260px;
+    font-size: 10px;
+  }
+
+  .main-content button {
+    font-size: 15px;
+    padding: 5px 30px;
+  }
+}
